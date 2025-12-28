@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 Vehicle Price Predictor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="main-wrapper">
+    <div class="glass-container">
+        <header>
+            <h1>🚗 Vehicle Price <span class="highlight">Predictor 2025</span></h1>
+            <p class="subtitle">AI-Powered Market Valuation for Indian Vehicles</p>
+        </header>
+
+        <form id="vehicleForm">
+            <div class="grid-row">
+                <div class="form-group">
+                    <label for="vehicleType">Vehicle Type</label>
+                    <select id="vehicleType" required>
+                        <option value="">Select Type</option>
+                        <option value="car">Car</option>
+                        <option value="bike">Bike</option>
+                        <option value="scooter">Scooter</option>
+                        <option value="truck">Truck</option>
+                        <option value="bus">Bus</option>
+                        <option value="tractor">Tractor</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="make">Brand / Make</label>
+                    <select id="make" required>
+                        <option value="">Select Brand</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="grid-row">
+                <div class="form-group">
+                    <label for="model">Model Name</label>
+                    <input type="text" id="model" required placeholder="e.g. Nexon EV, City">
+                </div>
+
+                <div class="form-group">
+                    <label for="year">Mfg Year</label>
+                    <input type="number" id="year" min="2010" max="2025" placeholder="2010 - 2025" required>
+                </div>
+            </div>
+
+            <div class="grid-row">
+                <div class="form-group">
+                    <label for="mileage">Mileage (km)</label>
+                    <input type="number" id="mileage" min="0" placeholder="Total KMs Driven" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="condition">Condition</label>
+                    <select id="condition" required>
+                        <option value="">Select Condition</option>
+                        <option value="excellent">Excellent (Like New)</option>
+                        <option value="good">Good (Minor Scratches)</option>
+                        <option value="fair">Fair (Needs Repair)</option>
+                        <option value="poor">Poor (Damaged)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="grid-row">
+                <div class="form-group">
+                    <label for="fuelType">Fuel Type</label>
+                    <select id="fuelType" required>
+                        <option value="">Select Fuel</option>
+                        <option value="petrol">Petrol</option>
+                        <option value="diesel">Diesel</option>
+                        <option value="cng">CNG</option>
+                        <option value="electric">Electric (EV)</option>
+                        <option value="hybrid">Hybrid</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="engineSize">Engine (CC)</label>
+                    <input type="number" id="engineSize" min="50" max="10000" placeholder="e.g. 1200" required>
+                </div>
+            </div>
+
+            <button type="submit" class="predict-btn">🚀 Predict Market Price</button>
+        </form>
+
+        <div class="result-card" id="result">
+            <h2>Estimated Value</h2>
+            <div class="price-tag">
+                <span class="currency">₹</span>
+                <span id="predictedPrice">0</span>
+            </div>
+            <p id="priceNote" class="note-text"></p>
+            <div class="trend-box">
+                <strong>📈 Market Trend:</strong> <span id="trendNote"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
