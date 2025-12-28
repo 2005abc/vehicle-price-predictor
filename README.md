@@ -41,8 +41,8 @@ in a <strong>MySQL database</strong>.
 
 <h3>Frontend</h3>
 <ul>
-    <li>HTML</li>
-    <li>CSS</li>
+    <li>HTML5</li>
+    <li>CSS3</li>
     <li>JavaScript</li>
 </ul>
 
